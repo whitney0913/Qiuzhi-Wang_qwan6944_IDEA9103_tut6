@@ -13,12 +13,12 @@ function draw() {
   drawBackgroundRect(50, 50, width - 100, height - 100, color(13, 27, 42));
 
   //create colour
-  let newBlue = '#41EAD4';
-  let newYellow  = '#FBFF12';
+  let newRed = '#800F2F';
+  let newPink  = '#FF4D6D';
   let newGreen = '#007f5f'; 
   
   // Draw a circle divided up and down
-  function drawSplitCircle(x, y, diameter, fillColor1 = newBlue, fillColor2 = newYellow) {
+  function drawSplitCircle(x, y, diameter, fillColor1 = newRed, fillColor2 = newPink) {
     fill(fillColor1);
     arc(x, y, diameter, diameter, PI, 0);
     fill(fillColor2);
@@ -28,7 +28,7 @@ function draw() {
   }
 
   // Draw a circle divided right and left
-  function drawSplitCircleLR(x, y, diameter, fillColor1 = newBlue, fillColor2 = newYellow) {
+  function drawSplitCircleLR(x, y, diameter, fillColor1 = newRed, fillColor2 = newPink) {
     fill(fillColor1);
     arc(x, y, diameter, diameter, HALF_PI, HALF_PI + PI);
     fill(fillColor2);
@@ -38,7 +38,7 @@ function draw() {
   }
 
    // Draw a circle divided by red and green
-  function drawSplitCircleTopRed(x, y, diameter, fillColor1 = newYellow, fillColor2 = newBlue) {
+  function drawSplitCircleTopRed(x, y, diameter, fillColor1 = newRed, fillColor2 = newPink) {
     fill(fillColor1);
     arc(x, y, diameter, diameter, PI, 0);
     fill(fillColor2);
@@ -179,8 +179,8 @@ function mousePressed() {
     diameter: random(20, 80),
     noiseOffsetX: random(1000),
     noiseOffsetY: random(1500),
-    color1: color(random(0, 3), random(4, 100), 228, 50),
-    color2: color(random(0, 3), random(4, 100), 228, 50)
+    color1: color(random(200, 255), random(200, 255),random(200, 255), 50),
+    color2: color(random(200, 255), random(200, 255),random(200, 255), 50)
   };
   // Add the new circle to the circles array
   circles.push(newCircle);
