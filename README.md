@@ -1,19 +1,20 @@
 # Qiuzhi-Wang_qwan6944_IDEA9103_tut6
 
-**Individual Task**
+## **Individual Task**
 
-1.  **Instructions for interacting with the code works**
+**1. Instructions for interacting with the code works**
    
 When clicking anywhere on the canvas, a new circle is generated. The diameter and colour of this circle are random. The circle will use Perlin noise to develop a slight random motion, adding to the dynamic effect.
 
 The interactive function implements the mousePressed functionality, which is called on mouse click and generates a new circle object.
 
-2.  **Detailed information about animation processing**
+**2. Detailed information about animation processing**
 
 - Using **Perlin** noise to drive animation
 Perlin noise is used to drive the motion of the circle to achieve smooth and natural animation. 
 
 - Animation properties
+  
 a.Circle motion: The circle's x and y coordinates are slightly adjusted based on the Perlin noise to make it move smoothly on the canvas.
 
 b.Background texture: Perlin noise is also used for the background's dot-matrix effect, making the background appear more dynamic and deeper.
