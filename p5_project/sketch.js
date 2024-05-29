@@ -9,20 +9,20 @@ function setup() {
   background(148, 177, 169);
 }
 
-// Green & Red
+// set circle colour
 function draw() {
   background(148, 177, 169); 
   drawBackgroundRect(50, 50, width - 100, height - 100, color(49, 74, 85));
 
-  let green = '#6F8F6A';
-  let red = '#C15B5C';
-  let yellow = '#F8E8B6';
+  let newBlue = '#41EAD4';
+  let newYellow  = '#FBFF12';
+  let newgreen = '007f5f';
   
   // Draw a circle divided up and down
   function drawSplitCircle(x, y, diameter) {
-    fill(green);
+    fill(newBlue);
     arc(x, y, diameter, diameter, PI, 0);
-    fill(red);
+    fill(newYellow);
     arc(x, y, diameter, diameter, 0, PI);
     noFill();
     ellipse(x, y, diameter, diameter);
@@ -30,18 +30,19 @@ function draw() {
 
   // Draw a circle divided right and left
   function drawSplitCircleLR(x, y, diameter) {
-    fill(green);
+    fill(newBlue);
     arc(x, y, diameter, diameter, HALF_PI, HALF_PI + PI);
-    fill(red);
+    fill(newYellow);
     arc(x, y, diameter, diameter, HALF_PI + PI, HALF_PI);
     noFill();
     ellipse(x, y, diameter, diameter);
   }
+
   // Draw a circle divided by red and green
   function drawSplitCircleTopRed(x, y, diameter) {
-    fill(red);
+    fill(newYellow);
     arc(x, y, diameter, diameter, PI, 0);
-    fill(green);
+    fill(newBlue);
     arc(x, y, diameter, diameter, 0, PI);
     noFill();
     ellipse(x, y, diameter, diameter);
@@ -76,25 +77,22 @@ function draw() {
   diameters = [60, 50, 80, 30];
 
   // The bottom rectangle remains unchanged
-  drawBottomRectangles(centerX, centerY + 1.11 * diameters[1] + diameters[2] + diameters[3], 300, 50, green, yellow);
+  drawBottomRectangles(centerX, centerY + 1.11 * diameters[1] + diameters[2] + diameters[3], 300, 50,newgreen);
 
-  // Draw a small green rectangle over the yellow rectangle
-  fill("#6F8F6A");
+  fill(55, 63, 71);
   noStroke();
   rect(centerX - 105, centerY + 1.7 * diameters[1] + diameters[2] + diameters[3], 50, 60);
 
-  // Draw a small yellow circle on the small green rectangle
-  fill("#F8E8B6");
+  fill(111, 94, 83);
   noStroke();
   ellipse(centerX - 80, centerY + 2.3 * diameters[1] + diameters[2] + diameters[3], 50);
 
-  // Draw a small red rectangle over the yellow rectangle
-  fill("#C15B5C");
-  rect(centerX + 55, centerY + 1.7 * diameters[1] + diameters[2] + diameters[3], 60, 60);
+  fill(55, 63, 71);
+  rect(centerX + 55, centerY + 1.7 * diameters[1] + diameters[2] + diameters[3], 50, 60);
 
-  // Draw a small yellow circle over the small red rectangle
-  fill("#F8E8B6");
-  ellipse(centerX + 85, centerY + 2.2 * diameters[1] + diameters[2] + diameters[3], 60);
+  fill(111, 94, 83);
+  ellipse(centerX + 80, centerY + 2.3 * diameters[1] + diameters[2] + diameters[3],60,60);
+
 
   // Upper median radius
   drawSplitCircleLR(centerX + noiseX, centerY - 0.92 * diameters[0] + noiseY, diameters[3]);
@@ -123,9 +121,11 @@ function draw() {
   drawLine(centerX + 1.26 * diameters[2] + diameters[0] + diameters[3] / 2 + noiseX, centerY + noiseY, centerX + 1.26 * diameters[2] + diameters[0] + diameters[3] / 2 + noiseX, centerY - 0.65 * diameters[0] - diameters[1] - diameters[2] + diameters[2] * 0.1 - diameters[2] / 2 + noiseY);
 
   // Background noise
-  for (let i = 0; i < 10000; i++) {
-    stroke(200, 200, 250, 50);
+  for (let i = 0; i < 30000; i++) {
+    stroke(0, 187, 249, 50);
     point(random(width) + noise(t + i) * 10 - 5, random(height) + noise(t + i + 10000) * 10 - 5);
+  }
+
     t += 0.01;
   noiseOffset += 0.005;
 
@@ -136,23 +136,22 @@ function drawBackgroundRect(x, y, width, height, color) {
   rect(x, y, width, height);
 }
 
-function drawBottomRectangles(centerX, y, rectWidth, rectHeight, green, yellow) {
+function drawBottomRectangles(centerX, y, rectWidth, rectHeight,) {
   let totalWidth = rectWidth * 3;
   let startX = centerX - totalWidth / 2;
 
-  fill(green);
+  fill(55, 63, 71);
   noStroke();
   rect(startX + 50, y + 40, (rectWidth * 3) - 100, rectHeight + 10);
 
-  fill(yellow);
+  fill(111, 94, 83);
   rect(startX + rectWidth, y + 30, rectWidth, rectHeight + 10);
 }
 
 function drawLine(x, y, x1, y1) {
   push();
-  stroke(235, 187, 138);
+  stroke(254, 252, 251);
   strokeWeight(3);
   line(x, y, x1, y1);
   pop();
-}
 }
