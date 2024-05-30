@@ -35,3 +35,7 @@ b. Color change: Changed all colors in the code. When a new circle is generated,
 c.Background texture:Use ```generateBackgroundTexture()```,Perlin noise to generate a matrix of dots that change slightly over time to make the background texture appear more vivid.
 
 d.Window resized: Added a ```windowresized()```function to resize the canvas when the browser window is resized.
+
+[An image of “mousePressed()”](https://p5js.org/reference/#/p5/mousePressed)
+[An image of “windowresized()”](https://p5js.org/reference/#/p5/windowResized)
+[An image of “push()”](https://p5js.org/reference/#/p5/push)
