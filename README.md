@@ -36,6 +36,6 @@ c.Background texture:Use ```generateBackgroundTexture()```,Perlin noise to gener
 
 d.Window resized: Added a ```windowresized()```function to resize the canvas when the browser window is resized.
 
-[An image of “mousePressed()”](https://p5js.org/reference/#/p5/mousePressed)
-[An image of “windowresized()”](https://p5js.org/reference/#/p5/windowResized)
-[An image of “push()”](https://p5js.org/reference/#/p5/push)
+[mousePressed()](https://p5js.org/reference/#/p5/mousePressed)
+[windowresized()](https://p5js.org/reference/#/p5/windowResized)
+[push()](https://p5js.org/reference/#/p5/push)
